@@ -1,0 +1,21 @@
+{
+  "name": "hw_9",
+  "version": "1.0.0",
+  "description": "project for hom work",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EAOzz/HomeWork/tree/master/HW_9"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^11.0.1"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
