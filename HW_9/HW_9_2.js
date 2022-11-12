@@ -6,4 +6,5 @@ const calculateBonus = (a, b) => {
     debugger; // проверены условия, расчитано значение переменной bonus
     return bonus;
     };
-console.log(calculateBonus(5,10));
+
+    module.exports = calculateBonus;
