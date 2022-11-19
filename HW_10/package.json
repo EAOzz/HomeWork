@@ -1,0 +1,15 @@
+{
+  "name": "hw_10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "HW_10_2_students_top.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-plugin-istanbul": "^6.1.1",
+    "jest": "^29.3.1"
+  }
+}
