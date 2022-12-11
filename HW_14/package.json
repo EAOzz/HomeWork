@@ -1,0 +1,17 @@
+{
+  "name": "hw_14",
+  "version": "1.0.0",
+  "description": "1st cypress test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "author": "EAOzz",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.0.2"
+  }
+}
