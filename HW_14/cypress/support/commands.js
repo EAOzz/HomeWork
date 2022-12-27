@@ -23,3 +23,9 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('testLink', (selector, pathnameForTest, selectorForTest,TextForTest) => {
+    cy.get(selector).last().click(),
+    cy.location('pathname').should('eq', pathnameForTest),
+    cy.get(selectorForTest).first().should('have.text', TextForTest),
+    cy.visit('/')
+ })

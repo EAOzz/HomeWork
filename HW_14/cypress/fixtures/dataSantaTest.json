@@ -1,0 +1,26 @@
+[
+  {
+    "selector": ".home-page-buttons > [href=\"/box/new\"] > .btn-main",
+    "pathnameForTest": "/box/new",
+    "selectorForTest": ".form-card__header",
+    "textForTest": "Придумайте название коробке"
+  },
+  {
+    "selector": "[href=\"/randomizer\"] > .btn-secondary",
+    "pathnameForTest": "/randomizer",
+    "selectorForTest": ".form-card__header",
+    "textForTest": "Быстрая жеребьевка"
+  },
+  {
+    "selector": "a[href*=\"/account/boxes\"]",
+    "pathnameForTest": "/account/boxes",
+    "selectorForTest": ".footer-item",
+    "textForTest": "Быстрая жеребьевка"
+  },
+  {
+    "selector": "a[href*=\"/account\"]",
+    "pathnameForTest": "/account",
+    "selectorForTest": "[id=\"account_profile_settings\"]",
+    "textForTest": "Настройки профиля"
+  }
+]
