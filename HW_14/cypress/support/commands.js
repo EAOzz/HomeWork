@@ -28,4 +28,50 @@ Cypress.Commands.add('testLink', (selector, pathnameForTest, selectorForTest,Tex
     cy.location('pathname').should('eq', pathnameForTest),
     cy.get(selectorForTest).first().should('have.text', TextForTest),
     cy.visit('/')
- })
+ }) // Тестирование перехода по ссылке
+
+
+ Cypress.Commands.add('login', (login, password, status) => {
+    cy.request({
+        method: 'POST',
+        url: '/api/login?redirect=%2',
+        failOnStatusCode: false,
+        body: {
+          email: login,
+          password: password
+               }
+      }).then((response) => {
+        expect(response.status).to.eq(status)
+      })
+}) // Тестирование авторизации
+
+Cypress.Commands.add('registration', (UserEmail, Name, status) => {
+    cy.request({
+        method: 'POST',
+        url: '/api/register',
+        failOnStatusCode: false,
+        body: {
+          email: UserEmail,
+          username: Name
+               }
+      }).then((response) => {
+        expect(response.status).to.eq(status)     
+      })
+}) // Тестирование регистрации
+
+// Cypress.Commands.add('randomEMail', () => {
+//   cy.request({
+//       method: 'POST',
+//       url: '/api/register',
+//       failOnStatusCode: false,
+//       body: {
+//         email: UserEmail,
+//         username: Name
+//              }
+//     }).then((response) => {
+//       expect(response.status).to.eq(status)     
+//     })
+// }) // Тестирование регистрации
+
+
+

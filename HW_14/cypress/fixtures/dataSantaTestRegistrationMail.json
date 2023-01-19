@@ -1,0 +1,22 @@
+[
+  {
+    "login": "",
+    "userName": "Kate",
+    "status": 400
+  },
+  {
+    "login": "tusha@mailto",
+    "userName": "Kate",
+    "status": 400
+  },
+  {
+    "login": "tushamailto.plus",
+    "userName": "Kate",
+    "status": 400
+  },
+  {
+    "login": "tushama@mailto.123",
+    "userName": "Kate",
+    "status": 400
+  }
+]

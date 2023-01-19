@@ -1,0 +1,17 @@
+[
+  {
+    "login": "katarinami@inbox.ru",
+    "password": "{{$passwordNew}}",
+    "status": 200
+  },
+  {
+    "login": "k@inbox.ru",
+    "password": "{{$passwordNew}}",
+    "status": 404
+  },
+  {
+    "login": "katarinami@inbox.ru",
+    "password": "password",
+    "status": 400
+  }
+]
