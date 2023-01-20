@@ -1,16 +1,13 @@
 [
   {
-    "login": "tzgyqfg38@enoiv.com",
-    "userName": "Kate",
+     "userName": "Kate",
     "status": 200
   },
   {
-    "login": "tzgyqjg38@enoiv.com",
     "userName": "",
     "status": 400
   },
   {
-    "login": "tzgyq6g38@enoiv.com",
     "userName": "a",
     "status": 400
   }

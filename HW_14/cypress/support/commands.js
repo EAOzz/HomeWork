@@ -59,19 +59,7 @@ Cypress.Commands.add('registration', (UserEmail, Name, status) => {
       })
 }) // Тестирование регистрации
 
-// Cypress.Commands.add('randomEMail', () => {
-//   cy.request({
-//       method: 'POST',
-//       url: '/api/register',
-//       failOnStatusCode: false,
-//       body: {
-//         email: UserEmail,
-//         username: Name
-//              }
-//     }).then((response) => {
-//       expect(response.status).to.eq(status)     
-//     })
-// }) // Тестирование регистрации
+
 
 
 
