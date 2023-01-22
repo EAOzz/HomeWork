@@ -6,7 +6,7 @@ module.exports = defineConfig({
    baseUrl: 'https://staging.lpitko.ru',
    env:{
     username: 'katarinami@inbox.ru',
-    password: '{{$passwordNew}}',
+    password: '1qaz2wsx',
     watchForFileChanges: false
    },
    setupNodeEvents(on, config) {
