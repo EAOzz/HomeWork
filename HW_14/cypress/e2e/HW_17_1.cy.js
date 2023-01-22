@@ -1,7 +1,6 @@
 import { faker } from '@faker-js/faker';
-import { LoginPage } from '../pages/loginPage';
-import { PersonalAccountPage } from '../pages/personalAccountPage';
-import { StartPage } from '../pages/startPage';
+const loginPageElemrnts = require("../fixtures/pages/loginPageSelectors.json");
+const accountPageElements = require("../fixtures/pages/accauntPageSelectors.json");
 
 describe('login - UI', () => {
     let firstPassword = "1qaz2wsx";
@@ -15,24 +14,22 @@ describe('login - UI', () => {
 
   
     it('registration_name_test', () => {
-      let loginPage = new LoginPage();
-      let accountPage = new PersonalAccountPage();
-      let startPage = new StartPage();
+      
       cy.visit('/');
-      startPage.elements.autorizationButton().click({force: true});
-      loginPage.login("katarinami@inbox.ru", firstPassword); // авторизация
-      loginPage.goToPersonalAccount("Kate");
-      accountPage.changePassword(secondPassword); // смена пароля
-      accountPage.elements.exitAccountButton().click();
-           
-      startPage.elements.autorizationButton().click({force: true});
-      loginPage.login("katarinami@inbox.ru", firstPassword); // авторизация с неверным паролкм
+      cy.contains("Вход и регистрация").click({force: true});
+      cy.login_UI(loginPageElemrnts.loginField, "katarinami@inbox.ru", loginPageElemrnts.passwordField, firstPassword, loginPageElemrnts.loginButton);
+      cy.contains("Kate").click({force: true});
+      cy.changePassword(accountPageElements.changePasswordField1, accountPageElements.changePasswordField2, accountPageElements.changePasswordButton, secondPassword);
+      cy.contains("Выйти с сайта").click();
+
+      cy.contains("Вход и регистрация").click({force: true});
+      cy.login_UI(loginPageElemrnts.loginField, "katarinami@inbox.ru", loginPageElemrnts.passwordField, firstPassword, loginPageElemrnts.loginButton);
       cy.contains("Неверное имя пользователя или пароль").should("exist");
-      loginPage.elements.passwordField().clear().type(secondPassword); // авторизация с верным паролем
-      loginPage.elements.loginButton().click();
-      loginPage.goToPersonalAccount("Kate");
-      accountPage.changePassword(firstPassword); // смена пароля
-      accountPage.elements.exitAccountButton().click()
+      cy.get(loginPageElemrnts.passwordField).clear().type(secondPassword);
+      cy.get(loginPageElemrnts.loginButton).click();
+      cy.contains("Kate").click({force: true});
+      cy.changePassword(accountPageElements.changePasswordField1, accountPageElements.changePasswordField2, accountPageElements.changePasswordButton, firstPassword);
+      cy.contains("Выйти с сайта").click()
 
     })
 })
